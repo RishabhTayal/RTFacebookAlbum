@@ -59,6 +59,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneSelected:)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutFacebook:)];
     
+    self.title = @"Albums";
+    
     if (FBSession.activeSession.isOpen) {
         // login is integrated with the send button -- so if open, we send
         [self sendRequests];

@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Rishabh Tayal' => 'rtayal11@gmail.com' }
   s.source           = { :git => 'https://github.com/rishabhtayal/RTFacebookAlbum.git', :tag => s.version.to_s }
 
-  s.platform     = :ios
+  s.platform     = :ios, '7.0'
   # s.ios.deployment_target = '5.0'
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true

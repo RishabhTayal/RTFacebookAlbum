@@ -1,4 +1,4 @@
-# myPod
+# RTFacebookAlbum
 
 [![Version](http://cocoapod-badges.herokuapp.com/v/myPod/badge.png)](http://cocoadocs.org/docsets/myPod)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/myPod/badge.png)](http://cocoadocs.org/docsets/myPod)

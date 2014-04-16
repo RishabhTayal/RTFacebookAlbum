@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.framework = 'FacebookSDK'
   s.preserve_paths = 'FacebookSDK.framework'
 
-  s.xcconfig = {'FRAMEWORK_SEARCH_PATHS => '"$FacebookSDK"'}
+  s.xcconfig = {'FRAMEWORK_SEARCH_PATHS' => '"$FacebookSDK"'}
   # s.ios.exclude_files = 'Classes'
   # s.osx.exclude_files = 'Classes'
 end

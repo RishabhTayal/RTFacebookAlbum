@@ -102,15 +102,15 @@
         _datasource = [NSMutableArray arrayWithArray:[resultDict objectForKey:@"data"]];
         _albumCoverArray = [[NSMutableArray alloc] initWithCapacity:_datasource.count];
         
+        __block int count = 0;
         for (int i = 0 ; i < _datasource.count; i++) {
-            
             NSString* graphPath = [NSString stringWithFormat:@"/%@/picture", [[_datasource objectAtIndex:i] objectForKey:@"id"]];
             NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:@"album", @"type", nil];
             [FBRequestConnection startWithGraphPath:graphPath parameters:params HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-                NSLog(@"%@", connection.urlResponse.URL);
+                count++;
                 NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:i], @"index" , connection.urlResponse.URL, @"URL", nil];
                 [_albumCoverArray addObject:dict];
-                if (i==_datasource.count) {
+                if (count ==_datasource.count) {
                     [self.tableView reloadData];
                 }
             }];
@@ -168,20 +168,26 @@
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"FacebookAlbumTableViewCell" owner:self options:nil] lastObject];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
     cell.textLabel.text = [[_datasource objectAtIndex:indexPath.row] objectForKey:@"name"];
     
     for (NSDictionary* dict in _albumCoverArray) {
         if ([[dict objectForKey:@"index"] intValue] == indexPath.row) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 NSData* imgData = [NSData dataWithContentsOfURL:[dict objectForKey:@"URL"]];
                 UIImage* img = [UIImage imageWithData:imgData];
-                dispatch_async(dispatch_get_main_queue(), ^{
+                dispatch_sync(dispatch_get_main_queue(), ^{
                     [cell.imageView setImage: img];
                     [cell.imageView setContentMode:UIViewContentModeScaleAspectFill];
-                    cell.imageView.clipsToBounds = YES;
+
+                    CGSize itemSize = CGSizeMake(80, 80);
+                    UIGraphicsBeginImageContext(itemSize);
+                    CGRect imageRect = CGRectMake(0, 0, itemSize.width, itemSize.height);
+                    [cell.imageView drawRect:imageRect];
+                    [cell.imageView setImage:UIGraphicsGetImageFromCurrentImageContext()];
+                    UIGraphicsEndImageContext();
                 });
             });
         }

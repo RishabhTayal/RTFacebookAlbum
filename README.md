@@ -11,7 +11,7 @@ To run the example project; clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-myPod is available through [CocoaPods](http://cocoapods.org), to install
+RTFacebookAlbum is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
     pod "RTFacebookAlbum"
@@ -22,5 +22,5 @@ Rishabh Tayal, rtayal11@gmail.com
 
 ## License
 
-myPod is available under the MIT license. See the LICENSE file for more info.
+RTFacebookAlbum is available under the MIT license. See the LICENSE file for more info.
 

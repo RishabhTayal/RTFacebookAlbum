@@ -22,8 +22,8 @@
 		0604028218FED97800AC82AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0604028018FED97800AC82AA /* InfoPlist.strings */; };
 		0604028418FED97800AC82AA /* RTFacebookAlbumDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604028318FED97800AC82AA /* RTFacebookAlbumDemoTests.m */; };
 		060402AA18FEDF2800AC82AA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060402A918FEDF2800AC82AA /* FacebookSDK.framework */; };
-		06FCCEEA18FEFF89001FA6B9 /* FacebookPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEE718FEFF89001FA6B9 /* FacebookPhotoViewController.m */; };
-		06FCCEEB18FEFF89001FA6B9 /* RTFacebookAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEE918FEFF89001FA6B9 /* RTFacebookAlbumViewController.m */; };
+		06FCCEF018FF0969001FA6B9 /* FacebookPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */; };
+		06FCCEF118FF0969001FA6B9 /* RTFacebookAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEEF18FF0969001FA6B9 /* RTFacebookAlbumViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +57,10 @@
 		0604028118FED97800AC82AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0604028318FED97800AC82AA /* RTFacebookAlbumDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTFacebookAlbumDemoTests.m; sourceTree = "<group>"; };
 		060402A918FEDF2800AC82AA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		06FCCEE618FEFF89001FA6B9 /* FacebookPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookPhotoViewController.h; path = ../../../Classes/RTFacebookAlbum/FacebookPhotoViewController.h; sourceTree = "<group>"; };
-		06FCCEE718FEFF89001FA6B9 /* FacebookPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookPhotoViewController.m; path = ../../../Classes/RTFacebookAlbum/FacebookPhotoViewController.m; sourceTree = "<group>"; };
-		06FCCEE818FEFF89001FA6B9 /* RTFacebookAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTFacebookAlbumViewController.h; path = ../../../Classes/RTFacebookAlbum/RTFacebookAlbumViewController.h; sourceTree = "<group>"; };
-		06FCCEE918FEFF89001FA6B9 /* RTFacebookAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTFacebookAlbumViewController.m; path = ../../../Classes/RTFacebookAlbum/RTFacebookAlbumViewController.m; sourceTree = "<group>"; };
+		06FCCEEC18FF0969001FA6B9 /* FacebookPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookPhotoViewController.h; path = ../../../Classes/FacebookPhotoViewController.h; sourceTree = "<group>"; };
+		06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookPhotoViewController.m; path = ../../../Classes/FacebookPhotoViewController.m; sourceTree = "<group>"; };
+		06FCCEEE18FF0969001FA6B9 /* RTFacebookAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTFacebookAlbumViewController.h; path = ../../../Classes/RTFacebookAlbumViewController.h; sourceTree = "<group>"; };
+		06FCCEEF18FF0969001FA6B9 /* RTFacebookAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTFacebookAlbumViewController.m; path = ../../../Classes/RTFacebookAlbumViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,10 +166,10 @@
 		0604028D18FED9A600AC82AA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				06FCCEE618FEFF89001FA6B9 /* FacebookPhotoViewController.h */,
-				06FCCEE718FEFF89001FA6B9 /* FacebookPhotoViewController.m */,
-				06FCCEE818FEFF89001FA6B9 /* RTFacebookAlbumViewController.h */,
-				06FCCEE918FEFF89001FA6B9 /* RTFacebookAlbumViewController.m */,
+				06FCCEEC18FF0969001FA6B9 /* FacebookPhotoViewController.h */,
+				06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */,
+				06FCCEEE18FF0969001FA6B9 /* RTFacebookAlbumViewController.h */,
+				06FCCEEF18FF0969001FA6B9 /* RTFacebookAlbumViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -273,10 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0604026918FED97800AC82AA /* RTAppDelegate.m in Sources */,
-				06FCCEEB18FEFF89001FA6B9 /* RTFacebookAlbumViewController.m in Sources */,
+				06FCCEF118FF0969001FA6B9 /* RTFacebookAlbumViewController.m in Sources */,
 				0604026F18FED97800AC82AA /* RTViewController.m in Sources */,
 				0604026518FED97800AC82AA /* main.m in Sources */,
-				06FCCEEA18FEFF89001FA6B9 /* FacebookPhotoViewController.m in Sources */,
+				06FCCEF018FF0969001FA6B9 /* FacebookPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

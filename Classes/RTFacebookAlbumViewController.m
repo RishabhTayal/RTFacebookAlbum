@@ -28,7 +28,6 @@
 
 #import "RTFacebookAlbumViewController.h"
 #import "FacebookPhotoViewController.h"
-#import "FacebookAlbumTableViewCell.h"
 
 @interface RTFacebookAlbumViewController ()
 
@@ -167,12 +166,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FacebookAlbumTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"FacebookAlbumTableViewCell" owner:self options:nil] lastObject];
     }
     
-    cell.albumNameLabel.text = [[_datasource objectAtIndex:indexPath.row] objectForKey:@"name"];
+    cell.textLabel.text = [[_datasource objectAtIndex:indexPath.row] objectForKey:@"name"];
     
     for (NSDictionary* dict in _albumCoverArray) {
         if ([[dict objectForKey:@"index"] intValue] == indexPath.row) {

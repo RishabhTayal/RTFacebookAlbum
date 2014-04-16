@@ -27,6 +27,8 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes/*.{h,m}'
   s.resources = 'Assets/*.png'
 
+  s.framework = 'FacebookSDK'
+
   # s.ios.exclude_files = 'Classes'
   # s.osx.exclude_files = 'Classes'
 end

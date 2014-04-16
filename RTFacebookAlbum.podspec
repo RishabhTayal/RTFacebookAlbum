@@ -7,13 +7,8 @@
 Pod::Spec.new do |s|
   s.name             = 'RTFacebookAlbum'
   s.version          = "1.0"
-  s.summary          = "A short description of myPod."
-  s.description      = <<-DESC
-                       An optional longer description of myPod
+  s.summary          = "Facebook Album and photo browser/"
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
   s.homepage         = "https://github.com/rishabhtayal/RTFacebookAlbum"
   s.license          = 'MIT'
   s.author           = { 'Rishabh Tayal' => 'rtayal11@gmail.com' }
@@ -25,7 +20,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Classes/*.{h,m}'
-  s.resources = 'Assets/*.png'
+  # s.resources = 'Assets/*.png'
 
   s.framework = 'FacebookSDK'
   s.header_dir = 'FacebookSDK'

@@ -28,5 +28,5 @@ Pod::Spec.new do |s|
   s.resources = 'Assets/*.png'
 
   # s.ios.exclude_files = 'Classes'
-  s.osx.exclude_files = 'Classes'
+  # s.osx.exclude_files = 'Classes'
 end

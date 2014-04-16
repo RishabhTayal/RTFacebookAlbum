@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
   s.resources = 'Assets/*.png'
 
   s.framework = 'FacebookSDK'
+  s.header_dir = 'FacebookSDK'
   s.preserve_paths = 'FacebookSDK.framework'
 
   s.xcconfig = {'FRAMEWORK_SEARCH_PATHS' => '"$RTFacebookAlbum/FacebookSDK"'}

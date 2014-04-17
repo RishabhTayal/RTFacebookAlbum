@@ -7,7 +7,7 @@ Usage
 
 
 
-To run the example project; just clone the repo and open xcodeproj file.
+To run the example project, just clone the repo and open xcodeproj file.
 
 ## Requirements
 

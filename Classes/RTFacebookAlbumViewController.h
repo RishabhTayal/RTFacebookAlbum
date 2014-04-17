@@ -34,8 +34,6 @@
 
 @interface RTFacebookAlbumViewController : UITableViewController<UIAlertViewDelegate>
 
-@property (weak) id<RTFacebookViewDelegate> delegate;
-
 +(void)showWithDelegate:(id<RTFacebookViewDelegate>)delegate;
 
 @end

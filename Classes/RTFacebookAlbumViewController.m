@@ -33,6 +33,7 @@
 
 @property (strong) NSMutableArray* datasource;
 @property (strong) NSMutableArray* albumCoverArray;
+@property (weak) id<RTFacebookViewDelegate> delegate;
 
 @end
 
@@ -118,7 +119,6 @@
             }];
         }
         
-        
         [self.tableView reloadData];
     }];
 }
@@ -199,8 +199,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    FacebookPhotoViewController*vc = [sb instantiateViewControllerWithIdentifier:@"FacebookPhotoViewController"];
     FacebookPhotoViewController* vc = [[FacebookPhotoViewController alloc] init];
     vc.albumId = [[_datasource objectAtIndex:indexPath.row] objectForKey:@"id"];
     vc.delegate = _delegate;

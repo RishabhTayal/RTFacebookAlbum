@@ -23,7 +23,7 @@ You need to create an app on https://developers.facebook.com/ to use this librar
 After you have created an app on Facebook you need to edit you Info.Plist. Add a key-value pair with key 'FacebookAppID' and value as the app id obtained from facebook app. Second key-calue pair would be
 
 \<key>CFBundleURLTypes\</key><br>
-	\<array><br>
+          \<array><br>
 		\<dict><br>
 			\<key>CFBundleURLSchemes\</key><br>
 			\<array><br>

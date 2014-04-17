@@ -3,7 +3,9 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/RTFacebookAlbum/badge.png)](http://cocoadocs.org/docsets/RTFacebookAlbum)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/RTFacebookAlbum/badge.png)](http://cocoadocs.org/docsets/RTFacebookAlbum)
 
-## Usage
+Usage
+
+
 
 To run the example project; clone the repo, and run `pod install` from the Example directory first.
 

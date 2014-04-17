@@ -21,7 +21,7 @@
 		0604027A18FED97800AC82AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0604025C18FED97800AC82AA /* UIKit.framework */; };
 		0604028218FED97800AC82AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0604028018FED97800AC82AA /* InfoPlist.strings */; };
 		0604028418FED97800AC82AA /* RTFacebookAlbumDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604028318FED97800AC82AA /* RTFacebookAlbumDemoTests.m */; };
-		060402AA18FEDF2800AC82AA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060402A918FEDF2800AC82AA /* FacebookSDK.framework */; };
+		062D1A0B19001DED003C3BA4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062D1A0A19001DED003C3BA4 /* FacebookSDK.framework */; };
 		06FCCEF018FF0969001FA6B9 /* FacebookPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */; };
 		06FCCEF118FF0969001FA6B9 /* RTFacebookAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEEF18FF0969001FA6B9 /* RTFacebookAlbumViewController.m */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		0604027F18FED97800AC82AA /* RTFacebookAlbumDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RTFacebookAlbumDemoTests-Info.plist"; sourceTree = "<group>"; };
 		0604028118FED97800AC82AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0604028318FED97800AC82AA /* RTFacebookAlbumDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTFacebookAlbumDemoTests.m; sourceTree = "<group>"; };
-		060402A918FEDF2800AC82AA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		062D1A0A19001DED003C3BA4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK.framework; sourceTree = "<group>"; };
 		06FCCEEC18FF0969001FA6B9 /* FacebookPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookPhotoViewController.h; path = ../../../Classes/FacebookPhotoViewController.h; sourceTree = "<group>"; };
 		06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookPhotoViewController.m; path = ../../../Classes/FacebookPhotoViewController.m; sourceTree = "<group>"; };
 		06FCCEEE18FF0969001FA6B9 /* RTFacebookAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTFacebookAlbumViewController.h; path = ../../../Classes/RTFacebookAlbumViewController.h; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0604025B18FED97800AC82AA /* CoreGraphics.framework in Frameworks */,
-				060402AA18FEDF2800AC82AA /* FacebookSDK.framework in Frameworks */,
+				062D1A0B19001DED003C3BA4 /* FacebookSDK.framework in Frameworks */,
 				0604025D18FED97800AC82AA /* UIKit.framework in Frameworks */,
 				0604025918FED97800AC82AA /* Foundation.framework in Frameworks */,
 			);
@@ -110,7 +110,7 @@
 		0604025718FED97800AC82AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				060402A918FEDF2800AC82AA /* FacebookSDK.framework */,
+				062D1A0A19001DED003C3BA4 /* FacebookSDK.framework */,
 				0604025818FED97800AC82AA /* Foundation.framework */,
 				0604025A18FED97800AC82AA /* CoreGraphics.framework */,
 				0604025C18FED97800AC82AA /* UIKit.framework */,
@@ -405,6 +405,7 @@
 					"$(inherited)",
 					/Users/rishabhtayal/Documents/FacebookSDK,
 					"$(PROJECT_DIR)",
+					/Users/rishabhtayal/Desktop/RTFacebookAlbum,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RTFacebookAlbumDemo/RTFacebookAlbumDemo-Prefix.pch";
@@ -423,6 +424,7 @@
 					"$(inherited)",
 					/Users/rishabhtayal/Documents/FacebookSDK,
 					"$(PROJECT_DIR)",
+					/Users/rishabhtayal/Desktop/RTFacebookAlbum,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RTFacebookAlbumDemo/RTFacebookAlbumDemo-Prefix.pch";

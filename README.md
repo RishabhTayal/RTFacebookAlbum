@@ -20,7 +20,7 @@ it simply add the following line to your Podfile:
 
 You need to create an app on https://developers.facebook.com/ to use this library in an actuall app and then add the Facebook app id to your app. The example project is already connected to a sample app on Facebook.
 
-After you have created an app on Facebook you need to edit you Info.Plist. Add a key-value pair with key 'FacebookAppID' and value as the app id obtained from facebook app. Second key-calue pair would be
+After you have created an app on Facebook you need to edit you Info.Plist. Add a key-value pair with key 'FacebookAppID' and value as the app id obtained from facebook app. Second key-value pair would be
 
 \<key>CFBundleURLTypes\</key><br>
 &nbsp;&nbsp;&nbsp;\<array><br>

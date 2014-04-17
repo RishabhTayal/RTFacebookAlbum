@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'RTFacebookAlbum'
-  s.version          = "1.0"
+  s.version          = "1.1"
   s.summary          = "Facebook Album and photo browser/"
 
   s.homepage         = "https://github.com/rishabhtayal/RTFacebookAlbum"
@@ -22,12 +22,12 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes/*.{h,m}'
   # s.resources = 'Assets/*.png'
 
-  s.framework = 'FacebookSDK'
-  s.header_dir = 'FacebookSDK'
-  s.preserve_paths = 'FacebookSDK.framework'
+  # s.framework = 'FacebookSDK'
+  # s.header_dir = 'FacebookSDK'
+  # s.preserve_paths = 'FacebookSDK.framework'
   s.dependency 'Facebook-iOS-SDK'
 
-  s.xcconfig = {'FRAMEWORK_SEARCH_PATHS' => '"$RTFacebookAlbum/FacebookSDK"'}
+  # s.xcconfig = {'FRAMEWORK_SEARCH_PATHS' => '"$RTFacebookAlbum/FacebookSDK"'}
   # s.ios.exclude_files = 'Classes'
   # s.osx.exclude_files = 'Classes'
 end

@@ -66,7 +66,7 @@
         // login is integrated with the send button -- so if open, we send
         [self sendRequests];
     } else {
-        NSArray* permissions = [NSArray arrayWithObjects:@"basic_info", @"user_photos", nil];
+        NSArray* permissions = [NSArray arrayWithObjects:@"user_friends", @"user_photos", nil];
         [FBSession openActiveSessionWithReadPermissions:permissions
                                            allowLoginUI:YES
                                       completionHandler:^(FBSession *session,
@@ -177,10 +177,10 @@
     
     for (NSDictionary* dict in _albumCoverArray) {
         if ([[dict objectForKey:@"index"] intValue] == indexPath.row) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
                 NSData* imgData = [NSData dataWithContentsOfURL:[dict objectForKey:@"URL"]];
                 UIImage* img = [UIImage imageWithData:imgData];
-                dispatch_sync(dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
                     [cell.imageView setImage: img];
                     [cell.imageView setContentMode:UIViewContentModeScaleAspectFill];
 

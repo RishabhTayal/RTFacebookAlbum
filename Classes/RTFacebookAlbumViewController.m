@@ -61,12 +61,15 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutFacebook:)];
     
     self.title = @"Albums";
-    
-    if (FBSession.activeSession.isOpen) {
+    NSArray* permissions = [NSArray arrayWithObjects:@"user_friends", @"user_photos", nil];
+	BOOL hasPermissions = YES;
+	for (NSString *permission in permissions) {
+		hasPermissions = (hasPermissions && [FBSession.activeSession hasGranted:permission]);
+	}
+    if (FBSession.activeSession.isOpen && hasPermissions) {
         // login is integrated with the send button -- so if open, we send
         [self sendRequests];
     } else {
-        NSArray* permissions = [NSArray arrayWithObjects:@"user_friends", @"user_photos", nil];
         [FBSession openActiveSessionWithReadPermissions:permissions
                                            allowLoginUI:YES
                                       completionHandler:^(FBSession *session,

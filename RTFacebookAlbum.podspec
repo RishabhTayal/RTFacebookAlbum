@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'RTFacebookAlbum'
-  s.version          = "1.1"
+  s.version          = "1.3"
   s.summary          = "Facebook Album and photo browser/"
 
   s.homepage         = "https://github.com/rishabhtayal/RTFacebookAlbum"

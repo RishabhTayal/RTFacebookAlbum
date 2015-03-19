@@ -22,6 +22,8 @@
 		0604028218FED97800AC82AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0604028018FED97800AC82AA /* InfoPlist.strings */; };
 		0604028418FED97800AC82AA /* RTFacebookAlbumDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604028318FED97800AC82AA /* RTFacebookAlbumDemoTests.m */; };
 		062D1A0B19001DED003C3BA4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062D1A0A19001DED003C3BA4 /* FacebookSDK.framework */; };
+		06E0ACD01ABB3EDB00EA8D00 /* RTFacebookAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E0ACCF1ABB3EDB00EA8D00 /* RTFacebookAlbumCell.xib */; };
+		06E0ACD31ABB3F2A00EA8D00 /* RTFacebookAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E0ACD21ABB3F2A00EA8D00 /* RTFacebookAlbumCell.m */; };
 		06FCCEF018FF0969001FA6B9 /* FacebookPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */; };
 		06FCCEF118FF0969001FA6B9 /* RTFacebookAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FCCEEF18FF0969001FA6B9 /* RTFacebookAlbumViewController.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,9 @@
 		0604028118FED97800AC82AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0604028318FED97800AC82AA /* RTFacebookAlbumDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTFacebookAlbumDemoTests.m; sourceTree = "<group>"; };
 		062D1A0A19001DED003C3BA4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK.framework; sourceTree = "<group>"; };
+		06E0ACCF1ABB3EDB00EA8D00 /* RTFacebookAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTFacebookAlbumCell.xib; path = ../../../Classes/RTFacebookAlbumCell.xib; sourceTree = "<group>"; };
+		06E0ACD11ABB3F2A00EA8D00 /* RTFacebookAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTFacebookAlbumCell.h; path = ../../../Classes/RTFacebookAlbumCell.h; sourceTree = "<group>"; };
+		06E0ACD21ABB3F2A00EA8D00 /* RTFacebookAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTFacebookAlbumCell.m; path = ../../../Classes/RTFacebookAlbumCell.m; sourceTree = "<group>"; };
 		06FCCEEC18FF0969001FA6B9 /* FacebookPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookPhotoViewController.h; path = ../../../Classes/FacebookPhotoViewController.h; sourceTree = "<group>"; };
 		06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookPhotoViewController.m; path = ../../../Classes/FacebookPhotoViewController.m; sourceTree = "<group>"; };
 		06FCCEEE18FF0969001FA6B9 /* RTFacebookAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTFacebookAlbumViewController.h; path = ../../../Classes/RTFacebookAlbumViewController.h; sourceTree = "<group>"; };
@@ -170,6 +175,9 @@
 				06FCCEED18FF0969001FA6B9 /* FacebookPhotoViewController.m */,
 				06FCCEEE18FF0969001FA6B9 /* RTFacebookAlbumViewController.h */,
 				06FCCEEF18FF0969001FA6B9 /* RTFacebookAlbumViewController.m */,
+				06E0ACD11ABB3F2A00EA8D00 /* RTFacebookAlbumCell.h */,
+				06E0ACD21ABB3F2A00EA8D00 /* RTFacebookAlbumCell.m */,
+				06E0ACCF1ABB3EDB00EA8D00 /* RTFacebookAlbumCell.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0604027118FED97800AC82AA /* Images.xcassets in Resources */,
+				06E0ACD01ABB3EDB00EA8D00 /* RTFacebookAlbumCell.xib in Resources */,
 				0604026318FED97800AC82AA /* InfoPlist.strings in Resources */,
 				0604026C18FED97800AC82AA /* Main.storyboard in Resources */,
 			);
@@ -275,6 +284,7 @@
 				0604026918FED97800AC82AA /* RTAppDelegate.m in Sources */,
 				06FCCEF118FF0969001FA6B9 /* RTFacebookAlbumViewController.m in Sources */,
 				0604026F18FED97800AC82AA /* RTViewController.m in Sources */,
+				06E0ACD31ABB3F2A00EA8D00 /* RTFacebookAlbumCell.m in Sources */,
 				0604026518FED97800AC82AA /* main.m in Sources */,
 				06FCCEF018FF0969001FA6B9 /* FacebookPhotoViewController.m in Sources */,
 			);

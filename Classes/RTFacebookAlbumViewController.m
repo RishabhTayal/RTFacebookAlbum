@@ -28,6 +28,7 @@
 
 #import "RTFacebookAlbumViewController.h"
 #import "FacebookPhotoViewController.h"
+#import "RTFacebookAlbumCell.h"
 
 @interface RTFacebookAlbumViewController ()
 
@@ -62,10 +63,10 @@
     
     self.title = @"Albums";
     NSArray* permissions = [NSArray arrayWithObjects:@"user_friends", @"user_photos", nil];
-	BOOL hasPermissions = YES;
-	for (NSString *permission in permissions) {
-		hasPermissions = (hasPermissions && [FBSession.activeSession hasGranted:permission]);
-	}
+    BOOL hasPermissions = YES;
+    for (NSString *permission in permissions) {
+        hasPermissions = (hasPermissions && [FBSession.activeSession hasGranted:permission]);
+    }
     if (FBSession.activeSession.isOpen && hasPermissions) {
         // login is integrated with the send button -- so if open, we send
         [self sendRequests];
@@ -171,28 +172,30 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    RTFacebookAlbumCell* cell = (RTFacebookAlbumCell*)[tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[NSBundle mainBundle] loadNibNamed:@"RTFacebookAlbumCell" owner:self options:nil][0];
     }
     
-    cell.textLabel.text = [[_datasource objectAtIndex:indexPath.row] objectForKey:@"name"];
-    
+    //    cell.textLabel.text = [[_datasource objectAtIndex:indexPath.row] objectForKey:@"name"];
+    cell.albumName.text = _datasource[indexPath.row][@"name"];
     for (NSDictionary* dict in _albumCoverArray) {
         if ([[dict objectForKey:@"index"] intValue] == indexPath.row) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
                 NSData* imgData = [NSData dataWithContentsOfURL:[dict objectForKey:@"URL"]];
                 UIImage* img = [UIImage imageWithData:imgData];
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [cell.imageView setImage: img];
-                    [cell.imageView setContentMode:UIViewContentModeScaleAspectFill];
-
-                    CGSize itemSize = CGSizeMake(80, 80);
-                    UIGraphicsBeginImageContext(itemSize);
-                    CGRect imageRect = CGRectMake(0, 0, itemSize.width, itemSize.height);
-                    [cell.imageView drawRect:imageRect];
-                    [cell.imageView setImage:UIGraphicsGetImageFromCurrentImageContext()];
-                    UIGraphicsEndImageContext();
+                    cell.albumLogo.image = img;
+                    //                    [cell.imageView setImage: img];
+                    //                    [cell.imageView setContentMode:UIViewContentModeScaleAspectFill];
+                    //
+                    //                    CGSize itemSize = CGSizeMake(80, 80);
+                    //                    UIGraphicsBeginImageContext(itemSize);
+                    //                    CGRect imageRect = CGRectMake(0, 0, itemSize.width, itemSize.height);
+                    //                    [cell.imageView drawRect:imageRect];
+                    //                    [cell.imageView setImage:UIGraphicsGetImageFromCurrentImageContext()];
+                    //                    UIGraphicsEndImageContext();
                 });
             });
         }

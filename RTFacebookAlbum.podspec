@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/rishabhtayal/RTFacebookAlbum"
   s.license          = 'MIT'
   s.author           = { 'Rishabh Tayal' => 'rtayal11@gmail.com' }
-  s.source           = { :git => 'https://github.com/rishabhtayal/RTFacebookAlbum.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/rishabhtayal/RTFacebookAlbum.git', :tag => "1.4" }
 
   s.platform     = :ios, '7.0'
   # s.ios.deployment_target = '5.0'

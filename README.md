@@ -32,7 +32,18 @@ After you have created an app on Facebook you need to edit you Info.Plist. Add a
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</dict><br>
 &nbsp;&nbsp;&nbsp;\</array><br>
 
+In AppDelegate Add
 
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [FBAppCall handleDidBecomeActive];
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+}
 ## Author
 
 Rishabh Tayal, rtayal11@gmail.com

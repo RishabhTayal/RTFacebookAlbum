@@ -8,12 +8,6 @@
 
 #import "RTFacebookAlbumCell.h"
 
-@interface RTFacebookAlbumCell()
-
-
-
-@end
-
 @implementation RTFacebookAlbumCell
 
 - (void)awakeFromNib {

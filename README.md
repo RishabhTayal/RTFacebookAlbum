@@ -1,5 +1,6 @@
 # RTFacebookAlbum
 
+[![Build Status](https://travis-ci.org/rishabhtayal/RTFacebookAlbum.svg?branch=master)](https://travis-ci.org/rishabhtayal/RTFacebookAlbum)
 [![Join the chat at https://gitter.im/rishabhtayal/RTFacebookAlbum](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rishabhtayal/RTFacebookAlbum?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Version](http://cocoapod-badges.herokuapp.com/v/RTFacebookAlbum/badge.png)](http://cocoadocs.org/docsets/RTFacebookAlbum)

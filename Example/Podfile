@@ -2,8 +2,8 @@ pod "myPod", :path => "../"
 
 xcodeproj 'Demo/RTFacebookAlbumDemo'
 
-target "Demo" do
+target "RTFacebookAlbumDemo" do
 end
 
-target "DemoTests" do
+target "RTFacebookAlbumDemoTests" do
 end

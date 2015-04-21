@@ -1,5 +1,13 @@
 language: objective-c
-before_install: rvm use $RVM_RUBY_VERSION
+before_install: gem install cocoapods xcpretty obcd slather -N
 install: bundle install --without=documentation --path ../travis_bundle_dir
 podfile: Example/Podfile
+env:
+- LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8
+script:
+- set -o pipefail && xcodebuild -workspace Example/Demo/RTFacebookAlbumDemo.xcworkspace
+-scheme RTFacebookAlbumDemo -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6"
+GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test | xcpretty -c
+- pod lib lint --quick
+- obcd --path RTFacebookAlbumDemo find HeaderStyle
 after_success: slather

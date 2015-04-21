@@ -1,1 +1,4 @@
 language: objective-c
+before_install: gem install cocoapods xcpretty obcd slather -N
+podfile: Example/Podfile
+after_success: slather

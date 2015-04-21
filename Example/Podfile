@@ -1,4 +1,4 @@
-pod "myPod", :path => "../"
+pod "RTFacebookAlbum", :path => "../RTFacebookAlbum.podspec"
 
 xcodeproj 'Demo/RTFacebookAlbumDemo'
 

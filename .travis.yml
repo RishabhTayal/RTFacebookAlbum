@@ -1,4 +1,5 @@
 language: objective-c
-before_install: gem install cocoapods xcpretty obcd slather -N
+before_install: rvm use $RVM_RUBY_VERSION
+install: bundle install --without=documentation --path ../travis_bundle_dir
 podfile: Example/Podfile
 after_success: slather

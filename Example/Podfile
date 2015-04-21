@@ -1,5 +1,7 @@
 pod "myPod", :path => "../"
 
+xcodeproj 'Example/Demo'
+
 target "Demo" do
 end
 

@@ -24,15 +24,15 @@ You need to create an app on https://developers.facebook.com/ to use this librar
 
 After you have created an app on Facebook you need to edit you Info.Plist. Add a key-value pair with key 'FacebookAppID' and value as the app id obtained from facebook app. Second key-value pair would be
 
-\<key>CFBundleURLTypes\</key><br>
-&nbsp;&nbsp;&nbsp;\<array><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<dict><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<key>CFBundleURLSchemes\</key><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<array><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<string>fb[YOUR APP ID]\</string><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</array><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</dict><br>
-&nbsp;&nbsp;&nbsp;\</array><br>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb[YOUR APP ID]</string>
+            </array>
+        </dict>
+    </array>
 
 In AppDelegate Add
 
